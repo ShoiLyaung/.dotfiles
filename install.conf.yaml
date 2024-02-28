@@ -13,6 +13,7 @@
     ~/.p10k.zsh: p10k.zsh
     ~/.zshrc: zshrc
     ~/.tmux.conf.local: tmux.conf.local
+    ~/.condarc: condarc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
