@@ -10,6 +10,7 @@
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
+    ~/.p10k.zsh: p10k.zsh
     ~/.zshrc: zshrc
     ~/.tmux.conf.local: tmux.conf.local
 
