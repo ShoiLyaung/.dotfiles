@@ -116,6 +116,30 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# >>> TeX Live >>>
+# Add TeX Live to the PATH, MANPATH, INFOPATH
+export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+# <<< Tex Live <<<
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source /home/sl/.config/broot/launcher/bash/br
+
+# # >>> GMCORE >>>
+# export PATH=/home/sl/Softwares/zlib-1.3.1/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/zlib-1.3.1/lib:$LD_LIBRARY_PATH
+# export PATH=/home/sl/Softwares/szip-2.1.1/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/szip-2.1.1/lib:$LD_LIBRARY_PATH
+# export PATH=/home/sl/Softwares/m4-1.4.19/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/m4-1.4.19/lib:$LD_LIBRARY_PATH
+# export PATH=/home/sl/Softwares/hdf5-1.14.3/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/hdf5-1.14.3/lib:$LD_LIBRARY_PATH
+# export NETCDF_ROOT=/home/sl/Softwares/netcdf
+# export PATH=/home/sl/Softwares/netcdf/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/netcdf/lib:$LD_LIBRARY_PATH
+# source /home/sl/intel/oneapi/setvars.sh --force
+# # <<< GMCORE <<<
+
+
+. "$HOME/.cargo/env"
