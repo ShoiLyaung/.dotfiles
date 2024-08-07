@@ -77,7 +77,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions tldr)
+ZSH_TMUX_AUTOSTART=true
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions tldr tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,10 +126,6 @@ alias df="df -h"           # -h prints human readable format
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# >>> oneAPI configuration >>>
-source /opt/intel/oneapi/setvars.sh >/dev/null
-# <<< oneAPI configuration <<<
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/sl/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -153,3 +150,21 @@ export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source /home/sl/.config/broot/launcher/bash/br
+
+# # >>> GMCORE >>>
+# export PATH=/home/sl/Softwares/zlib-1.3.1/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/zlib-1.3.1/lib:$LD_LIBRARY_PATH
+# export PATH=/home/sl/Softwares/szip-2.1.1/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/szip-2.1.1/lib:$LD_LIBRARY_PATH
+# export PATH=/home/sl/Softwares/m4-1.4.19/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/m4-1.4.19/lib:$LD_LIBRARY_PATH
+# export PATH=/home/sl/Softwares/hdf5-1.14.3/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/hdf5-1.14.3/lib:$LD_LIBRARY_PATH
+# export NETCDF_ROOT=/home/sl/Softwares/netcdf
+# export PATH=/home/sl/Softwares/netcdf/bin:$PATH
+# export LD_LIBRARY_PATH=/home/sl/Softwares/netcdf/lib:$LD_LIBRARY_PATH
+# source /home/sl/intel/oneapi/setvars.sh --force > /dev/null
+# # <<< GMCORE <<<
+
+source /etc/profile.d/clash.sh
+
