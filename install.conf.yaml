@@ -12,7 +12,7 @@
     ~/.vimrc: vimrc
     ~/.p10k.zsh: p10k.zsh
     ~/.zshrc: zshrc
-    ~/.tmux.conf.local: tmux.conf.local
+    # ~/.tmux.conf.local: tmux.conf.local
     ~/.condarc: condarc
 
 - shell:
