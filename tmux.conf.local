@@ -374,6 +374,8 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # this is the place to override or undo settings
 
+set -s escape-time 50
+
 # increase history size
 #set -g history-limit 10000
 
